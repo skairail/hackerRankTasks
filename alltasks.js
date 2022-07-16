@@ -2,7 +2,6 @@
 
 
 function pairs(k, arr) {
-
     let numberofpairs = 0;
     for (let i = arr.length - 1; i >= 0; i-- )    
      {
@@ -58,7 +57,7 @@ function isBalanced(s) {
 
 // COMPARE THE TRIPLETS (EASY) https://www.hackerrank.com/challenges/compare-the-triplets/problem
 
-function compareTriplets(a, b) {
+function comp areTriplets(a, b) {
     let aliceScore = 0;
     let bobScore = 0;
     for (let i = 0; i < a.length; i++) {
@@ -78,19 +77,21 @@ function compareTriplets(a, b) {
 
 // A VERY BIG SUM (EASY)   https://www.hackerrank.com/challenges/a-very-big-sum/problem?h_r=profile
 
-function aVeryBigSum(ar) {
-    let sum = 0;
-  for (let i = 0; i < ar.length; i++) {
+function aVeryBigSum(ar)
+{
+  let sum = 0;
+  for (let i = 0; i < ar.length; i++)
+  {
     sum += ar[i];
   }
   return sum;
-
 }
 
 
 //DRAWING BOOK (EASY) https://www.hackerrank.com/challenges/drawing-book/submissions/code/278637194
 
-function pageCount(n, p) {
+function pageCount(n, p)
+{
     const pageTurns = Math.floor(p / 2);
     const totalTurns = Math.floor(n / 2);
 
@@ -99,8 +100,8 @@ function pageCount(n, p) {
 
 //SPARSE ARRAYS (MEDIUM) https://www.hackerrank.com/challenges/sparse-arrays/problem?h_r=profile
 
-function matchingStrings(strings, queries) {
-   
+function matchingStrings(strings, queries) 
+{   
     let arrofinstances = []
      for(let i = 0; i < queries.length;i++)
      {
@@ -121,14 +122,25 @@ function matchingStrings(strings, queries) {
 
  // EXTRA LONG FACTORIALS(MEDIUM) https://www.hackerrank.com/challenges/extra-long-factorials/problem
 
- function extraLongFactorials(n) {
-
+ function extraLongFactorials(n) 
+{
     var bigInt = BigInt(n);
     var factorial = 1n;
 
-    for (let i = 0n; i < bigInt ; i++) {
+    for (let i = 0n; i < bigInt ; i++)
+    {
         factorial *= bigInt - i;
     }
-    
     console.log(factorial.toString());
+}
+
+
+// STAIRCASE (EASY) https://www.hackerrank.com/challenges/staircase/problem
+
+function staircase (n)
+{
+    for (let i = 1; i <= n; i++)
+    {
+        console.log("#".repeat(i).padStart(n));
+    }
 }
