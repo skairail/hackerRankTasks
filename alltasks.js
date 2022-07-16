@@ -1,7 +1,8 @@
 // PAIRS (MEDIUM)  https://www.hackerrank.com/challenges/pairs/submissions/code/276600756
 
 
-function pairs(k, arr) {
+function pairs(k, arr) 
+{
     let numberofpairs = 0;
     for (let i = arr.length - 1; i >= 0; i-- )    
      {
@@ -17,7 +18,8 @@ function pairs(k, arr) {
 
 // BALANCED BRACKETS (MEDIUM) https://www.hackerrank.com/challenges/balanced-brackets/submissions/code/276699909
 
-function isBalanced(s) {
+function isBalanced(s) 
+{
     let arr = [];
     for(let i = 0; i < s.length; i++)
     {
@@ -57,7 +59,8 @@ function isBalanced(s) {
 
 // COMPARE THE TRIPLETS (EASY) https://www.hackerrank.com/challenges/compare-the-triplets/problem
 
-function comp areTriplets(a, b) {
+function comp areTriplets(a, b) 
+{
     let aliceScore = 0;
     let bobScore = 0;
     for (let i = 0; i < a.length; i++) {
