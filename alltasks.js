@@ -1,13 +1,10 @@
 // PAIRS (MEDIUM)  https://www.hackerrank.com/challenges/pairs/submissions/code/276600756
 
 
-function pairs(k, arr) 
-{
+function pairs(k, arr) {
     let numberofpairs = 0;
-    for (let i = arr.length - 1; i >= 0; i-- )    
-     {
-       for(let j = 0; j < arr.length ; j++)
-       {
+    for (let i = arr.length - 1; i >= 0; i-- ) {
+       for(let j = 0; j < arr.length ; j++) {
            if ((arr[i] - arr[j]) === k)
            numberofpairs++; 
        }
@@ -18,14 +15,11 @@ function pairs(k, arr)
 
 // BALANCED BRACKETS (MEDIUM) https://www.hackerrank.com/challenges/balanced-brackets/submissions/code/276699909
 
-function isBalanced(s) 
-{
+function isBalanced(s) {
     let arr = [];
-    for(let i = 0; i < s.length; i++)
-    {
+    for(let i = 0; i < s.length; i++) {
         let x = s[i];
-        if (x == '(' || x == '[' || x == '{')
-        {
+        if (x == '(' || x == '[' || x == '{') {
             arr.push(x);
             continue;
         }
@@ -33,7 +27,7 @@ function isBalanced(s)
             return "NO";
               
         let check;
-        switch (x){
+        switch (x) {
         case ')':
             check = arr.pop();
             if (check == '{' || check == '[')
@@ -59,8 +53,7 @@ function isBalanced(s)
 
 // COMPARE THE TRIPLETS (EASY) https://www.hackerrank.com/challenges/compare-the-triplets/problem
 
-function comp areTriplets(a, b) 
-{
+function comp areTriplets(a, b) {
     let aliceScore = 0;
     let bobScore = 0;
     for (let i = 0; i < a.length; i++) {
@@ -80,11 +73,9 @@ function comp areTriplets(a, b)
 
 // A VERY BIG SUM (EASY)   https://www.hackerrank.com/challenges/a-very-big-sum/problem?h_r=profile
 
-function aVeryBigSum(ar)
-{
+function aVeryBigSum(ar) {
   let sum = 0;
-  for (let i = 0; i < ar.length; i++)
-  {
+  for (let i = 0; i < ar.length; i++) {
     sum += ar[i];
   }
   return sum;
@@ -93,8 +84,7 @@ function aVeryBigSum(ar)
 
 //DRAWING BOOK (EASY) https://www.hackerrank.com/challenges/drawing-book/submissions/code/278637194
 
-function pageCount(n, p)
-{
+function pageCount(n, p) {
     const pageTurns = Math.floor(p / 2);
     const totalTurns = Math.floor(n / 2);
 
@@ -103,16 +93,12 @@ function pageCount(n, p)
 
 //SPARSE ARRAYS (MEDIUM) https://www.hackerrank.com/challenges/sparse-arrays/problem?h_r=profile
 
-function matchingStrings(strings, queries) 
-{   
+function matchingStrings(strings, queries) {   
     let arrofinstances = []
-     for(let i = 0; i < queries.length;i++)
-     {
+     for(let i = 0; i < queries.length;i++) {
          let instances = 0
-         for(let j = 0; j < strings.length ; j++)
-         {
-             if ((strings[j] === queries[i]))
-             {
+         for(let j = 0; j < strings.length ; j++) {
+             if ((strings[j] === queries[i])) {
              instances++; 
              }    
          }
@@ -125,13 +111,11 @@ function matchingStrings(strings, queries)
 
  // EXTRA LONG FACTORIALS(MEDIUM) https://www.hackerrank.com/challenges/extra-long-factorials/problem
 
- function extraLongFactorials(n) 
-{
+ function extraLongFactorials(n) {
     var bigInt = BigInt(n);
     var factorial = 1n;
 
-    for (let i = 0n; i < bigInt ; i++)
-    {
+    for (let i = 0n; i < bigInt ; i++) {
         factorial *= bigInt - i;
     }
     console.log(factorial.toString());
@@ -140,10 +124,28 @@ function matchingStrings(strings, queries)
 
 // STAIRCASE (EASY) https://www.hackerrank.com/challenges/staircase/problem
 
-function staircase (n)
-{
-    for (let i = 1; i <= n; i++)
-    {
+function staircase (n) {
+    for (let i = 1; i <= n; i++) {
         console.log("#".repeat(i).padStart(n));
     }
+}
+
+// ENCRYPTION (MEDIUM) https://www.hackerrank.com/challenges/encryption/problem
+
+function encryption(s) {
+    let sqrtOfStr = Math.sqrt(s.length)
+    let ceilofSqrt = Math.ceil(sqrtOfStr)
+    let strArr = [...s];
+    let globalArr = [];
+        while(strArr.length != 0 || strArr < 0) {   
+            if (strArr.length < ceilofSqrt) {
+                let splicedStr = strArr.splice(0,strArr.length)
+                globalArr.push(splicedStr.join(''))
+            }
+            else {
+                globalArr.push(strArr.splice(0,ceilofSqrt).join(''))
+            }
+     }
+        let joindeStr =  globalArr.join(' ')
+        return joindeStr
 }
